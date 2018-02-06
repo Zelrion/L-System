@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 public static class StringGenerator {
-	private static string axiom = "X";
-	private static int iterations = 6;
+	private static string axiom = "[N]++[N]++[N]++[N]++[N]";
+	private static int iterations = 4;
 	private static Dictionary<char,string> rules = new Dictionary<char,string> {
-		{ 'X',"F[-X][X]F[-X]+FX" },
-		{ 'F',"FF" }
+		{ 'M',"OA++PA----NA[-OA----MA]++" },
+		{ 'N',"+OA--PA[---MA--NA]+"},
+		{ 'O',"-MA++NA[+++OA++PA]-"},
+		{ 'P',"--OA++++MA[+PA++++NA]--NA" },
+		{ 'A',""}
 	};
 	public static string GenerateCommand() {
 		string sentence = axiom;
